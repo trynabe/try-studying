@@ -2,6 +2,8 @@
 
 by trynabe
 
+[เปิดเว็บ Try-Studying](https://trynabe.github.io/try-studying/)
+
 เว็บสรุป Computer Architecture (ITDS-211) ภาษาไทย รวมเนื้อหาทั้ง 8 บทไว้ในสมุดรายวิชา
 
 - สรุป 117 หัวข้อ พร้อม 43 สูตรและตัวอย่างคำนวณ และภาพอธิบาย 11 ภาพ
@@ -40,3 +42,7 @@ npm test
 - `tests/quizzes.mjs`: ชุดตรวจแบบทดสอบ
 
 ฟอนต์และไลบรารีภายนอกมีไฟล์ลิขสิทธิ์อยู่ใน `dist/fonts/` และ `dist/vendor/`
+
+## เผยแพร่ผ่าน GitHub Pages
+
+เมื่อ push เข้า `main` GitHub Actions จะตรวจแบบทดสอบ แล้วเผยแพร่ไฟล์ใน `dist/` อัตโนมัติ ตั้งค่า Pages source เป็น **GitHub Actions** และดูผลได้จากแท็บ Actions
