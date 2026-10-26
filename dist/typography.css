@@ -1,0 +1,111 @@
+/* PT Serif: regular text, bold titles, italic captions, bold italic display. */
+body {
+  font-weight: 400;
+}
+
+code, kbd, samp, pre {
+  font-family: var(--font);
+}
+
+.brand {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.workspace small,
+.nav-label,
+.chapter-label,
+.folder-code,
+.reader-heading .eyebrow,
+.quiz-intro .eyebrow {
+  font-weight: 400;
+  font-style: normal;
+}
+
+.chapter-label,
+.folder-code {
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.course-body h3,
+.quiz-intro h3,
+.progress-row h3,
+.folder-caption > a,
+.reader-heading h1,
+.quiz-header h1,
+.folder-view-heading h1 {
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: 0;
+}
+
+.course-body h3 {
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.quiz-intro h3 {
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+.progress-row h3,
+.folder-caption > a {
+  font-size: 14px;
+}
+
+.reader-heading h1,
+.quiz-header h1,
+.folder-view-heading h1 {
+  font-size: 30px;
+  line-height: 1.3;
+}
+
+.hero .eyebrow,
+.summary-card .number,
+.lesson-check .eyebrow {
+  font-size: 11px;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.6;
+  letter-spacing: 1.1px;
+}
+
+.folder-front-copy h3 {
+  font-size: 26px;
+  font-weight: 700;
+  font-style: italic;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+.worked-example .eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  font-style: italic;
+  line-height: 1.6;
+  letter-spacing: 1.1px;
+}
+
+.lesson-formula pre {
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@media (max-width: 760px) {
+  .reader-heading h1,
+  .quiz-header h1,
+  .folder-view-heading h1 {
+    font-size: 24px;
+  }
+
+  .course-body h3 {
+    font-size: 16px;
+  }
+
+  .quiz-intro h3 {
+    font-size: 18px;
+  }
+}

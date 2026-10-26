@@ -1,0 +1,10 @@
+{
+  "name": "try-studying",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node tests/quizzes.mjs",
+    "start": "python -m http.server 8000 --bind 127.0.0.1 --directory dist"
+  }
+}
