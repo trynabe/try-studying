@@ -48,7 +48,17 @@ export function render(){
   document.getElementById('app').innerHTML=shell(content,inBook);
 }
 
-window.addEventListener('hashchange',()=>{menuOpen=false;render();window.scrollTo(0,0);});
+window.addEventListener('hashchange',event=>{
+  // go() also refreshes the current quiz after a hint, answer, or question change.
+  // Only navigation to a different URL should send the reader back to the top.
+  const samePage=event.oldURL===event.newURL;
+  const position=samePage?{left:window.scrollX,top:window.scrollY}:{left:0,top:0};
+  const focusId=samePage?document.activeElement?.id:null;
+  menuOpen=false;
+  render();
+  if(focusId)document.getElementById(focusId)?.focus({preventScroll:true});
+  window.scrollTo({...position,behavior:'instant'});
+});
 document.addEventListener('click',async event=>{
   const target=event.target.closest('button,a');
   if(!target)return;
