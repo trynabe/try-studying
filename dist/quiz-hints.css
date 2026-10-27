@@ -1,0 +1,40 @@
+/* A small study note, using the journal's existing light and charcoal palettes. */
+.quiz-hint {
+  margin: 0 0 23px;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: 3px;
+  background: var(--panel2);
+  color: var(--text);
+}
+.quiz-hint-toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 52px;
+  padding: 13px 17px;
+  text-align: left;
+  font-size: 13px;
+  line-height: 1.7;
+}
+.quiz-hint-toggle > .icon { color: var(--accent); width: 19px; height: 19px; }
+.quiz-hint-toggle:hover { background: var(--panel); }
+.quiz-hint-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+.quiz-hint-action { margin-left: auto; display: inline-flex; align-items: center; gap: 7px; color: var(--muted); font-size: 11px; white-space: nowrap; }
+.quiz-hint-action .icon { width: 15px; height: 15px; transition: transform .15s; }
+.quiz-hint-toggle[aria-expanded='true'] .quiz-hint-action .icon { transform: rotate(180deg); }
+.quiz-hint-content { padding: 0 17px 17px; font-size: 14px; line-height: 1.95; overflow-wrap: anywhere; }
+.quiz-hint-content[hidden] { display: none; }
+.quiz-hint-content strong { display: block; margin-bottom: 4px; font-size: 12px; color: var(--accent); }
+.quiz-hint-approach { margin: 0; padding-top: 14px; border-top: 1px solid var(--border); }
+.quiz-hint-memory { display: flex; align-items: flex-start; gap: 10px; margin-top: 14px; padding: 12px 14px; background: var(--panel); border: 1px dashed var(--border); border-radius: 2px; }
+.quiz-hint-memory > .icon { margin-top: 3px; width: 17px; height: 17px; color: var(--accent); }
+.quiz-hint-memory p { margin: 0; }
+@media (max-width: 480px) {
+  .quiz-hint-toggle { gap: 7px; padding: 12px; font-size: 12px; }
+  .quiz-hint-action { gap: 4px; font-size: 10px; }
+  .quiz-hint-content { padding: 0 12px 13px; font-size: 13px; }
+  .quiz-hint-memory { padding: 10px; }
+}
+@media (prefers-reduced-motion: reduce) { .quiz-hint-action .icon { transition: none; } }

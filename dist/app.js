@@ -1,7 +1,7 @@
 import {icon,empty,setCourses} from './core.js';
 import {renderFolderCard} from './folders.js?v=quizzes-restored-20261027';
 import {setSummaryData,renderContentSummary,handleSummaryClick} from './review.js?v=quizzes-restored-20261027';
-import {renderQuizList,renderQuiz,renderResult,renderMistakes,handleQuizClick} from './quiz.js?v=quizzes-restored-20261027';
+import {renderQuizList,renderQuiz,renderResult,renderMistakes,handleQuizClick} from './quiz.js?v=question-hints-20261027';
 
 let menuOpen=false;
 const datestr=()=>new Intl.DateTimeFormat('th-TH',{timeZone:'Asia/Bangkok',day:'numeric',month:'long',year:'numeric'}).format(new Date());
@@ -72,7 +72,7 @@ document.addEventListener('keydown',event=>{
 try{
   const [summaryResponse,quizResponse]=await Promise.all([
     fetch('review-data.json?v=summary-integrated-20261027',{cache:'no-cache'}),
-    fetch('quiz-data.json?v=quizzes-restored-20261027',{cache:'no-cache'})
+    fetch('quiz-data.json?v=question-hints-20261027',{cache:'no-cache'})
   ]);
   if(!summaryResponse.ok||!quizResponse.ok)throw Error('Study content unavailable');
   const [summaryData,quizData]=await Promise.all([summaryResponse.json(),quizResponse.json()]);
